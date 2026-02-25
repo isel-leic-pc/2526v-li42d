@@ -1,7 +1,7 @@
 package pt.isel.pc.echo_servers
 
 import mu.KotlinLogging
-import pt.isel.pc.utils.writeLine
+import pt.isel.pc.echo_servers.utils.writeLine
 import java.io.BufferedReader
 import java.io.BufferedWriter
 import java.io.IOException
@@ -10,6 +10,7 @@ import java.io.OutputStreamWriter
 import java.net.InetSocketAddress
 import java.net.ServerSocket
 import java.net.Socket
+import java.lang.Thread.sleep
 
 /**
  * A multithreaded echo server.
@@ -34,22 +35,22 @@ class MT_EchoServer(val port: Int, val address: String = "0.0.0.0") {
         val logger = KotlinLogging.logger {}
     }
 
-    private fun processConnection(clientSock: Socket) {
-        logger.info("client ${clientSock.remoteSocketAddress} connected")
+    private fun processConnection(clientSock: Socket, clientId: Int) {
+        //logger.info("client ${clientSock.remoteSocketAddress} connected")
         clientSock.use {
             val reader = BufferedReader(InputStreamReader(clientSock.getInputStream()))
             val writer = BufferedWriter(OutputStreamWriter(clientSock.getOutputStream()))
             reader.use {
                 writer.use {
                     try {
-                        writer.writeLine("hello, client ")
+                        writer.writeLine("hello, client $clientId" /* add clientId*/)
                         while(true) {
                             val line = reader.readLine() ?: break
                             if (line == EXIT) {
                                 writer.writeLine("bye")
                                 break;
                             }
-                            logger.info("line '$line' received")
+                            //logger.info("line '$line' received")
 
                             // echo the line
                             writer.writeLine(line)
@@ -64,24 +65,38 @@ class MT_EchoServer(val port: Int, val address: String = "0.0.0.0") {
             }
 
         }
-        logger.info("client ${clientSock.remoteSocketAddress} disconnected")
+        //logger.info("client ${clientSock.remoteSocketAddress} disconnected")
     }
 
     fun run() {
         ServerSocket().use { serverSock ->
-            var clientId = 0
             serverSock.bind(InetSocketAddress(address, port))
             logger.info("Waiting for client connections")
+            var clientId = 0
             while(true) {
                 val clientSock = serverSock.accept()
-                clientId++
+
                 // launch a new java platform thread
-                // for processing of the new client.
+                // for process the new client
                 // As we will see later, this is not a very scalable solution!
+
+                // increase the clientId to get the id of the new client
+                clientId++
+                val observedClientd = clientId
+
                 var thread = Thread {
-                    processConnection(clientSock)
+                    // first solution for assignment of a client id, increase here the clientId var. Bad!
+                    // clientId++
+
+                    // second solution for assignment of a client id, increase the var "clientId"  on the main thread
+                    // and observe it here when called processConnection. Bad!
+
+                    // third solution for assignment of  a client id, increase the var "clientId" on the main thread
+                    // and save the result on a val, used on the call to processConnection. Ok!
+                    processConnection(clientSock, observedClientd)
                 }
                 thread.start()
+
             }
         }
     }

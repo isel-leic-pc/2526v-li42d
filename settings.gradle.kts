@@ -12,3 +12,6 @@ plugins {
 
 rootProject.name = "2526v-li42d"
 include("lecture-02-18-threads-intro")
+
+include("lecture-02-24-synchro-intro")
+include("lab1")
