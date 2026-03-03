@@ -3,6 +3,7 @@ package pt.isel.pc.lab1.locks
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 import pt.isel.pc.locks.Counter
+import pt.isel.pc.locks.Counter2
 import kotlin.concurrent.thread
 
 class CounterTests {

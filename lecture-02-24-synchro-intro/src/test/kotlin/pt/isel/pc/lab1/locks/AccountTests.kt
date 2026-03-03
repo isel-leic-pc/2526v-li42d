@@ -1,6 +1,7 @@
 package pt.isel.pc.lab1.locks
 
 import org.junit.jupiter.api.Assertions
+import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 import pt.isel.pc.locks.Account
 import kotlin.concurrent.thread
@@ -41,8 +42,8 @@ class AccountTests {
               src, dst -> src.transfer0(dst, TRANSFER_VALUE)
         }
 
-        Assertions.assertEquals(INITIAL_BALANCE, acc1.getBalance())
-        Assertions.assertEquals(INITIAL_BALANCE, acc2.getBalance())
+        assertEquals(INITIAL_BALANCE, acc1.getBalance())
+        assertEquals(INITIAL_BALANCE, acc2.getBalance())
     }
 
     @Test
@@ -55,8 +56,8 @@ class AccountTests {
                 src, dst -> src.transfer1(dst, TRANSFER_VALUE)
         }
 
-        Assertions.assertEquals(INITIAL_BALANCE, acc1.getBalance())
-        Assertions.assertEquals(INITIAL_BALANCE, acc2.getBalance())
+        assertEquals(INITIAL_BALANCE, acc1.getBalance())
+        assertEquals(INITIAL_BALANCE, acc2.getBalance())
     }
 
     @Test
@@ -68,8 +69,8 @@ class AccountTests {
         multipleTransfersBetween2Accounts(acc1, acc2) {
                 src, dst -> src.transfer2(dst, TRANSFER_VALUE)
         }
-        Assertions.assertEquals(INITIAL_BALANCE, acc1.getBalance())
-        Assertions.assertEquals(INITIAL_BALANCE, acc2.getBalance())
+        assertEquals(INITIAL_BALANCE, acc1.getBalance())
+        assertEquals(INITIAL_BALANCE, acc2.getBalance())
     }
 
     @Test
@@ -81,7 +82,7 @@ class AccountTests {
         multipleTransfersBetween2Accounts(acc1, acc2) {
                 src, dst -> src.transfer3(dst, TRANSFER_VALUE)
         }
-        Assertions.assertEquals(INITIAL_BALANCE, acc1.getBalance())
-        Assertions.assertEquals(INITIAL_BALANCE, acc2.getBalance())
+        assertEquals(INITIAL_BALANCE, acc1.getBalance())
+        assertEquals(INITIAL_BALANCE, acc2.getBalance())
     }
 }

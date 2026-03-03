@@ -5,13 +5,13 @@
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="gradleHome" value="C:\gradle\gradle-9.3.1" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/lab1" />
             <option value="$PROJECT_DIR$/lecture-02-18-threads-intro" />
             <option value="$PROJECT_DIR$/lecture-02-24-synchro-intro" />
+            <option value="$PROJECT_DIR$/lecture-03-03-control-synchronization-intro" />
           </set>
         </option>
       </GradleProjectSettings>

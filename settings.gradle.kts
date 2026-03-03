@@ -15,3 +15,4 @@ include("lecture-02-18-threads-intro")
 
 include("lecture-02-24-synchro-intro")
 include("lab1")
+include("lecture-03-03-control-synchronization-intro")

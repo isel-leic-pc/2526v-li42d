@@ -1,8 +1,12 @@
-package pt.isel.pc.parallelism
+package pt.isel.pc.paralelism
 
+import com.sun.org.apache.xalan.internal.lib.ExsltDatetime.time
 import pt.isel.pc.utils.buildString
 import pt.isel.pc.utils.stringsMaker
+import pt.isel.pc.utils.stringsMaker
 import pt.isel.pc.utils.test
+import kotlin.math.min
+import kotlin.system.measureTimeMillis
 
 /**
  * Count (in serial) the times the "pred" predicate returns true for each value

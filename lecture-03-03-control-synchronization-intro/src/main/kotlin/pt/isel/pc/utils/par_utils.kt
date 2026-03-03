@@ -1,5 +1,6 @@
 package pt.isel.pc.utils
 
+import kotlin.math.min
 import kotlin.system.measureTimeMillis
 
 /**
@@ -26,6 +27,29 @@ fun stringsMaker(total: Int, templates : List<String>) : Array<String> {
             }.toTypedArray()
 
 }
+
+/**
+ * Divides a range of items into a list of subranges, where each sub-range
+ * is represented as a pair of indices.
+ * Each sub-range attempts to distribute items evenly among the specified number of parts.
+ *
+ * @param count the total number of items to be divided into parts; must be greater than 0
+ * @param nParts the number of parts to divide the items into; must be greater than 0
+ * @return a list of pairs of integers, where each pair represents the start (inclusive) and end (exclusive)
+ * indices of a part
+ * @throws IllegalArgumentException if the preconditions for `count` and `nParts` are not met
+ */
+fun partsList(count: Int, nParts: Int) : List<Pair<Int,Int>> {
+    require(count > 0 && nParts > 0 && count > 2*nParts)
+    val step = (count - 1) / nParts + 1
+
+    return generateSequence(Pair(0, step)) {
+            seed -> Pair(seed.second, min(seed.second + step, count))
+    }
+        .take(nParts)
+        .toList()
+}
+
 
 /**
  * Executes a given searching function multiple times and measures its performance
