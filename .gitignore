@@ -31,5 +31,8 @@ replay_pid*
 # Ignore Gradle build output directory
 build
 
+# ignore intellij cache
+.idea
+
 # Ignore Kotlin plugin data
 .kotlin
