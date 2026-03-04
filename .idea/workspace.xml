@@ -5,14 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c6552ab8-0fa8-4e35-8724-391b87493993" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lecture-02-24-synchro-intro/src/main/kotlin/pt/isel/pc/locks/Counter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/lecture-02-24-synchro-intro/src/main/kotlin/pt/isel/pc/locks/Counter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lecture-02-24-synchro-intro/src/main/kotlin/pt/isel/pc/parallelism/par_algs.kt" beforeDir="false" afterPath="$PROJECT_DIR$/lecture-02-24-synchro-intro/src/main/kotlin/pt/isel/pc/parallelism/par_algs.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lecture-02-24-synchro-intro/src/main/kotlin/pt/isel/pc/utils/par_utils.kt" beforeDir="false" afterPath="$PROJECT_DIR$/lecture-02-24-synchro-intro/src/main/kotlin/pt/isel/pc/utils/par_utils.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lecture-02-24-synchro-intro/src/test/kotlin/pt/isel/pc/lab1/locks/AccountTests.kt" beforeDir="false" afterPath="$PROJECT_DIR$/lecture-02-24-synchro-intro/src/test/kotlin/pt/isel/pc/lab1/locks/AccountTests.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lecture-02-24-synchro-intro/src/test/kotlin/pt/isel/pc/lab1/locks/CounterTests.kt" beforeDir="false" afterPath="$PROJECT_DIR$/lecture-02-24-synchro-intro/src/test/kotlin/pt/isel/pc/lab1/locks/CounterTests.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -47,22 +42,61 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Gradle.SimpleThreadPoolTests.effect of a break inside mutex withLock.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.SimpleThreadPoolTests.simple work deliver and execution test.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/home/disciplinas/PC/2s2025-2026/src/2526v-li42d&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.2526v-li42d [:lab2:pt.isel.pc.synchro.Par_algsKt.main()].executor": "Run",
+    "Gradle.Build 2526v-li42d.executor": "Run",
+    "Gradle.QueueTests.multiple use with a single consumer and producer test.executor": "Run",
+    "Gradle.SimpleThreadPoolTests.effect of a break inside mutex withLock.executor": "Run",
+    "Gradle.SimpleThreadPoolTests.simple work deliver and execution test.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/home/disciplinas/PC/2s2025-2026/src/2526v-li42d/lab2/src/main/kotlin/pt/isel/pc/utils",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager" selected="Gradle.SimpleThreadPoolTests.effect of a break inside mutex withLock">
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\home\disciplinas\PC\2s2025-2026\src\2526v-li42d\lab2\src\main\kotlin\pt\isel\pc\utils" />
+      <recent name="C:\home\disciplinas\PC\2s2025-2026\src\2526v-li42d\lab2\src\main\kotlin\pt\isel\pc\synchro" />
+    </key>
+    <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
+      <recent name="pt.isel.pc.synchro" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Kotlin.Par_algsKt">
+    <configuration name="QueueTests.multiple use with a single consumer and producer test" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":lab2:test" />
+            <option value="--tests" />
+            <option value="&quot;pt.isel.pc.synchro.QueueTests.multiple use with a single consumer and producer test&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <ExternalSystemDebugDisabled>false</ExternalSystemDebugDisabled>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <GradleProfilingDisabled>false</GradleProfilingDisabled>
+      <GradleCoverageDisabled>false</GradleCoverageDisabled>
+      <method v="2" />
+    </configuration>
     <configuration name="SimpleThreadPoolTests.effect of a break inside mutex withLock" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -117,8 +151,28 @@
       <GradleCoverageDisabled>false</GradleCoverageDisabled>
       <method v="2" />
     </configuration>
+    <configuration name="Par_algsKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="pt.isel.pc.synchro.Par_algsKt" />
+      <module name="2526v-li42d.lab2.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="2526v-li42d" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="2526v-li42d" />
+      <option name="filePath" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.Par_algsKt" />
+        <item itemvalue="Gradle.QueueTests.multiple use with a single consumer and producer test" />
         <item itemvalue="Gradle.SimpleThreadPoolTests.effect of a break inside mutex withLock" />
         <item itemvalue="Gradle.SimpleThreadPoolTests.simple work deliver and execution test" />
       </list>
@@ -143,6 +197,7 @@
       <workItem from="1772552165883" duration="8056000" />
       <workItem from="1772572022765" duration="138000" />
       <workItem from="1772572553397" duration="5674000" />
+      <workItem from="1772640714222" duration="2303000" />
     </task>
     <servers />
   </component>

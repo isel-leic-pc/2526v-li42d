@@ -9,6 +9,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/lab1" />
+            <option value="$PROJECT_DIR$/lab2" />
             <option value="$PROJECT_DIR$/lecture-02-18-threads-intro" />
             <option value="$PROJECT_DIR$/lecture-02-24-synchro-intro" />
             <option value="$PROJECT_DIR$/lecture-03-03-control-synchronization-intro" />
