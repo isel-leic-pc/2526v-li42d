@@ -30,9 +30,9 @@ class Queue<T>(capacity: Int = 4){
 
     /**
      * The following "badTake" functions are all "bad" in the sense that
-     * we should not (amd will not) implement take with "busy waiting", since
+     * we should not (and will not) implement take with "busy waiting", since
      * the waiting time is completely indeterminate, could be micros, could be minutes!
-     * They are just more or less "bad", illustrating common bad synchronization scenarios.
+     * They are just more or less "bad", illustrating common wrong synchronization scenarios.
      */
 
     /**
@@ -55,7 +55,7 @@ class Queue<T>(capacity: Int = 4){
     //            list.removeFirst()
     //        }
 
-    // But it's ok, since the withLock function is marked as "inline", which means that is injected directly
+    // But here it's ok, since the withLock function is marked as "inline", which means that is injected directly
     // in the function badTake0, as it was written like this:
     //
     //        mutex.lock()
@@ -71,7 +71,7 @@ class Queue<T>(capacity: Int = 4){
      * Second try for busy waiting a non-empty list.
      * Here the problem is that we have a classic Non-Atomic Check And Act.
      * In other words, the list can be observed as NonEmpty, but before acquiring the lock
-     * in line 69 another "take" could have happened, the list is now "empty", and removeFirst throws an exceptiom
+     * in line 84 another "take" could have happened, the list is now "empty", and removeFirst throws an exceptiom
      *
      */
     fun badTake1() : T {
@@ -99,9 +99,8 @@ class Queue<T>(capacity: Int = 4){
                         break
                 }
                 // try to give the processor to another thread
-                // in order to avoid monopolize the processor
+                // in order to avoid processor monopolization
                 sleep(0)
-
             };
             mutex.withLock {
                 if (list.isNotEmpty())

@@ -13,6 +13,8 @@
             <option value="$PROJECT_DIR$/lecture-02-18-threads-intro" />
             <option value="$PROJECT_DIR$/lecture-02-24-synchro-intro" />
             <option value="$PROJECT_DIR$/lecture-03-03-control-synchronization-intro" />
+            <option value="$PROJECT_DIR$/lecture-03-10-monitors-intro" />
+            <option value="$PROJECT_DIR$/lecture-03-11-more-monitors" />
           </set>
         </option>
       </GradleProjectSettings>

@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c6552ab8-0fa8-4e35-8724-391b87493993" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lecture-03-03-control-synchronization-intro/src/main/kotlin/pt/isel/pc/synchronizers/Queue.kt" beforeDir="false" afterPath="$PROJECT_DIR$/lecture-03-03-control-synchronization-intro/src/main/kotlin/pt/isel/pc/synchronizers/Queue.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,32 +42,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.2526v-li42d [:lab2:pt.isel.pc.synchro.Colored_threadsKt.main()].executor": "Run",
-    "Gradle.2526v-li42d [:lab2:pt.isel.pc.synchro.Par_algsKt.main()].executor": "Run",
-    "Gradle.Build 2526v-li42d.executor": "Run",
-    "Gradle.QueueTests.multiple use with a single consumer and producer test.executor": "Run",
-    "Gradle.SimpleThreadPoolTests.effect of a break inside mutex withLock.executor": "Run",
-    "Gradle.SimpleThreadPoolTests.simple work deliver and execution test.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/home/disciplinas/PC/2s2025-2026/src/2526v-li42d",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.2526v-li42d [:lab2:pt.isel.pc.synchro.Colored_threadsKt.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.2526v-li42d [:lab2:pt.isel.pc.synchro.Par_algsKt.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Build 2526v-li42d.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.QueueTests.multiple use with a single consumer and producer test.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.SimpleThreadPoolTests.effect of a break inside mutex withLock.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.SimpleThreadPoolTests.simple work deliver and execution test.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/home/disciplinas/PC/2s2025-2026/src/2526v-li42d&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\home\disciplinas\PC\2s2025-2026\src\2526v-li42d\lab2\src\main\kotlin\pt\isel\pc\utils" />
       <recent name="C:\home\disciplinas\PC\2s2025-2026\src\2526v-li42d\lab2\src\main\kotlin\pt\isel\pc\synchro" />
     </key>
     <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
+      <recent name="pt.isel.pc.monitors" />
       <recent name="pt.isel.pc.synchro" />
+    </key>
+    <key name="K2MoveDeclarationsDialog.RECENT_PACKAGE_KEY">
+      <recent name="pt.isel.pc.monitors" />
+      <recent name="pt.isel.pc" />
     </key>
   </component>
   <component name="RunManager" selected="Kotlin.Colored_threadsKt">
@@ -206,6 +213,13 @@
       <workItem from="1772572553397" duration="5674000" />
       <workItem from="1772640714222" duration="2303000" />
       <workItem from="1772643939098" duration="2141000" />
+      <workItem from="1772657981718" duration="36000" />
+      <workItem from="1773056874923" duration="2130000" />
+      <workItem from="1773155015201" duration="8913000" />
+      <workItem from="1773184435442" duration="3698000" />
+      <workItem from="1773245693106" duration="1999000" />
+      <workItem from="1773248212104" duration="5803000" />
+      <workItem from="1773396346129" duration="5426000" />
     </task>
     <servers />
   </component>
