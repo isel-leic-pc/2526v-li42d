@@ -7,7 +7,6 @@
     <list default="true" id="c6552ab8-0fa8-4e35-8724-391b87493993" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lecture-03-03-control-synchronization-intro/src/main/kotlin/pt/isel/pc/synchronizers/Queue.kt" beforeDir="false" afterPath="$PROJECT_DIR$/lecture-03-03-control-synchronization-intro/src/main/kotlin/pt/isel/pc/synchronizers/Queue.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -24,6 +23,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Kotlin Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -31,6 +31,10 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleScriptDefinitionsStorage" workingDir="$PROJECT_DIR$" gradleHome="C:\Users\jmart\.gradle\wrapper\dists\gradle-9.3.1-bin\23ovyewtku6u96viwx3xl3oks\gradle-9.3.1" javaHome="C:\Users\jmart\.jdks\openjdk-25.0.2" gradleVersion="9.3.1" />
+  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
+  <component name="KubernetesApiProvider"><![CDATA[{
+  "isMigrated": true
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
 }</component>
@@ -42,25 +46,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Gradle.2526v-li42d [:lab2:pt.isel.pc.synchro.Colored_threadsKt.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.2526v-li42d [:lab2:pt.isel.pc.synchro.Par_algsKt.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Build 2526v-li42d.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.QueueTests.multiple use with a single consumer and producer test.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.SimpleThreadPoolTests.effect of a break inside mutex withLock.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.SimpleThreadPoolTests.simple work deliver and execution test.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/home/disciplinas/PC/2s2025-2026/src/2526v-li42d&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.2526v-li42d [:lab2:pt.isel.pc.synchro.Colored_threadsKt.main()].executor": "Run",
+    "Gradle.2526v-li42d [:lab2:pt.isel.pc.synchro.Par_algsKt.main()].executor": "Run",
+    "Gradle.Build 2526v-li42d.executor": "Run",
+    "Gradle.QueueTests.multiple use with a single consumer and producer test.executor": "Run",
+    "Gradle.SimpleThreadPoolTests.effect of a break inside mutex withLock.executor": "Run",
+    "Gradle.SimpleThreadPoolTests.simple work deliver and execution test.executor": "Run",
+    "Gradle.ThreadInterruptionTests.executor": "Run",
+    "Gradle.ThreadInterruptionTests.interrupt thread blocked on a sleep.executor": "Run",
+    "Gradle.ThreadInterruptionTests.interrupt thread in new state and start after.executor": "Run",
+    "Gradle.ThreadInterruptionTests.interrupt thread in new state.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/home/disciplinas/PC/2s2025-2026/src/2526v-li42d",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\home\disciplinas\PC\2s2025-2026\src\2526v-li42d\lab2\src\main\kotlin\pt\isel\pc\utils" />
@@ -75,8 +84,8 @@
       <recent name="pt.isel.pc" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotlin.Colored_threadsKt">
-    <configuration name="QueueTests.multiple use with a single consumer and producer test" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.ThreadInterruptionTests.interrupt thread in new state and start after">
+    <configuration name="ThreadInterruptionTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -87,9 +96,9 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value=":lab2:test" />
+            <option value=":lecture-03-17-timeout-and-cancellation:test" />
             <option value="--tests" />
-            <option value="&quot;pt.isel.pc.synchro.QueueTests.multiple use with a single consumer and producer test&quot;" />
+            <option value="&quot;pt.isel.pc.threads.ThreadInterruptionTests&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -103,7 +112,7 @@
       <GradleCoverageDisabled>false</GradleCoverageDisabled>
       <method v="2" />
     </configuration>
-    <configuration name="SimpleThreadPoolTests.effect of a break inside mutex withLock" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ThreadInterruptionTests.interrupt thread blocked on a sleep" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -114,9 +123,9 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value=":lecture-03-03-control-synchronization-intro:test" />
+            <option value=":lecture-03-17-timeout-and-cancellation:test" />
             <option value="--tests" />
-            <option value="&quot;pt.isel.pc.synchronizers.SimpleThreadPoolTests.effect of a break inside mutex withLock&quot;" />
+            <option value="&quot;pt.isel.pc.threads.ThreadInterruptionTests.interrupt thread blocked on a sleep&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -130,7 +139,7 @@
       <GradleCoverageDisabled>false</GradleCoverageDisabled>
       <method v="2" />
     </configuration>
-    <configuration name="SimpleThreadPoolTests.simple work deliver and execution test" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ThreadInterruptionTests.interrupt thread in new state and start after" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -141,9 +150,36 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value=":lecture-03-03-control-synchronization-intro:test" />
+            <option value=":lecture-03-17-timeout-and-cancellation:test" />
             <option value="--tests" />
-            <option value="&quot;pt.isel.pc.synchronizers.SimpleThreadPoolTests.simple work deliver and execution test&quot;" />
+            <option value="&quot;pt.isel.pc.threads.ThreadInterruptionTests.interrupt thread in new state and start after&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <ExternalSystemDebugDisabled>false</ExternalSystemDebugDisabled>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <GradleProfilingDisabled>false</GradleProfilingDisabled>
+      <GradleCoverageDisabled>false</GradleCoverageDisabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="ThreadInterruptionTests.interrupt thread in new state" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":lecture-03-17-timeout-and-cancellation:test" />
+            <option value="--tests" />
+            <option value="&quot;pt.isel.pc.threads.ThreadInterruptionTests.interrupt thread in new state&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -164,13 +200,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Par_algsKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="pt.isel.pc.synchro.Par_algsKt" />
-      <module name="2526v-li42d.lab2.main" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <module name="2526v-li42d" />
       <method v="2">
@@ -184,11 +213,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.ThreadInterruptionTests.interrupt thread in new state and start after" />
+        <item itemvalue="Gradle.ThreadInterruptionTests.interrupt thread in new state" />
+        <item itemvalue="Gradle.ThreadInterruptionTests.interrupt thread blocked on a sleep" />
+        <item itemvalue="Gradle.ThreadInterruptionTests" />
         <item itemvalue="Kotlin.Colored_threadsKt" />
-        <item itemvalue="Kotlin.Par_algsKt" />
-        <item itemvalue="Gradle.QueueTests.multiple use with a single consumer and producer test" />
-        <item itemvalue="Gradle.SimpleThreadPoolTests.effect of a break inside mutex withLock" />
-        <item itemvalue="Gradle.SimpleThreadPoolTests.simple work deliver and execution test" />
       </list>
     </recent_temporary>
   </component>
@@ -220,10 +249,27 @@
       <workItem from="1773245693106" duration="1999000" />
       <workItem from="1773248212104" duration="5803000" />
       <workItem from="1773396346129" duration="5426000" />
+      <workItem from="1773417629015" duration="60000" />
+      <workItem from="1773749101125" duration="5073000" />
+      <workItem from="1773761810950" duration="8075000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/lecture-03-17-timeout-and-cancellation/src/main/kotlin/pt/isel/pc/monitors/SemaphoreFifo.kt</url>
+          <line>28</line>
+          <properties>
+            <option name="lambda-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

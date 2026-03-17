@@ -15,6 +15,7 @@
             <option value="$PROJECT_DIR$/lecture-03-03-control-synchronization-intro" />
             <option value="$PROJECT_DIR$/lecture-03-10-monitors-intro" />
             <option value="$PROJECT_DIR$/lecture-03-11-more-monitors" />
+            <option value="$PROJECT_DIR$/lecture-03-17-timeout-and-cancellation" />
           </set>
         </option>
       </GradleProjectSettings>
