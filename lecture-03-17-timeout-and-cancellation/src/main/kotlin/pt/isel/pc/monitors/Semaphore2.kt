@@ -4,7 +4,9 @@ import java.util.concurrent.locks.ReentrantLock
 import kotlin.concurrent.withLock
 import kotlin.time.Duration
 
-
+/**
+ * A semaphore unfair
+ */
 class SemaphoreN(initialPermits : Int) {
     private val mutex = ReentrantLock()
     private var permits = initialPermits
