@@ -5,7 +5,8 @@ import kotlin.concurrent.withLock
 import kotlin.time.Duration
 
 /**
- * A semaphore unfair
+ * A generic semaphore with unfair acquire
+ * (large unit acquires may starve)
  */
 class SemaphoreN(initialPermits : Int) {
     private val mutex = ReentrantLock()
@@ -42,6 +43,7 @@ class SemaphoreN(initialPermits : Int) {
     fun release(units: Int) {
         mutex.withLock {
             permits += units
+            // here we need a broadcast signal, since we don't know who can proceed
             hasPermits.signalAll()
         }
     }

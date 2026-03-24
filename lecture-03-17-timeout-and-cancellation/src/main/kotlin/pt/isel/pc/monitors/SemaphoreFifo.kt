@@ -6,12 +6,17 @@ import java.util.concurrent.locks.ReentrantLock
 import kotlin.concurrent.withLock
 import kotlin.time.Duration
 
+/**
+ * Generic Semaphore with fair acquire (FIFO)
+ */
 class SemaphoreFifo(initialPermits: Int) {
     private val mutex = ReentrantLock()
     private var permits = initialPermits
     private val hasPermits = mutex.newCondition()
 
     private class PendingAcquire(val units: Int)
+
+    // wait queue needed by fair acquire
     private val pendingAcquires = LinkedList<PendingAcquire>()
 
     init {
@@ -33,13 +38,17 @@ class SemaphoreFifo(initialPermits: Int) {
                 return true
             }
             if (timeout == Duration.ZERO) return false
+
             // wait path
             var timeoutNanos = timeout.inWholeNanoseconds
+
+            // add into queue with FIFO semantic
             val myAcquire = PendingAcquire(units)
             pendingAcquires.addLast(myAcquire)
             try {
                 do {
                     timeoutNanos = hasPermits.awaitNanos(timeoutNanos)
+                    // only the first can proceed
                     if (pendingAcquires.first() == myAcquire && permits >= units) {
                         pendingAcquires.removeFirst()
                         permits -= units
@@ -59,7 +68,6 @@ class SemaphoreFifo(initialPermits: Int) {
                 trySignal()
                 throw e
             }
-
         }
     }
 

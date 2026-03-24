@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c6552ab8-0fa8-4e35-8724-391b87493993" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+    <list default="true" id="c6552ab8-0fa8-4e35-8724-391b87493993" name="Changes" comment="test integrated git on intellij">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lecture-03-17-timeout-and-cancellation/src/main/kotlin/pt/isel/pc/monitors/Semaphore1.kt" beforeDir="false" afterPath="$PROJECT_DIR$/lecture-03-17-timeout-and-cancellation/src/main/kotlin/pt/isel/pc/monitors/Semaphore1.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lecture-03-17-timeout-and-cancellation/src/main/kotlin/pt/isel/pc/monitors/Semaphore2.kt" beforeDir="false" afterPath="$PROJECT_DIR$/lecture-03-17-timeout-and-cancellation/src/main/kotlin/pt/isel/pc/monitors/Semaphore2.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lecture-03-17-timeout-and-cancellation/src/main/kotlin/pt/isel/pc/monitors/SemaphoreFifo.kt" beforeDir="false" afterPath="$PROJECT_DIR$/lecture-03-17-timeout-and-cancellation/src/main/kotlin/pt/isel/pc/monitors/SemaphoreFifo.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,11 +31,23 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;jmartins3&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/isel-leic-pc/2526v-li42d.git&quot;,
+    &quot;accountId&quot;: &quot;ad2558f6-2cad-46de-a407-30e8ec8b7be9&quot;
+  }
+}</component>
   <component name="GradleScriptDefinitionsStorage" workingDir="$PROJECT_DIR$" gradleHome="C:\Users\jmart\.gradle\wrapper\dists\gradle-9.3.1-bin\23ovyewtku6u96viwx3xl3oks\gradle-9.3.1" javaHome="C:\Users\jmart\.jdks\openjdk-25.0.2" gradleVersion="9.3.1" />
-  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
-  <component name="KubernetesApiProvider"><![CDATA[{
-  "isMigrated": true
-}]]></component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
 }</component>
@@ -46,30 +59,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.2526v-li42d [:lab2:pt.isel.pc.synchro.Colored_threadsKt.main()].executor": "Run",
-    "Gradle.2526v-li42d [:lab2:pt.isel.pc.synchro.Par_algsKt.main()].executor": "Run",
-    "Gradle.Build 2526v-li42d.executor": "Run",
-    "Gradle.QueueTests.multiple use with a single consumer and producer test.executor": "Run",
-    "Gradle.SimpleThreadPoolTests.effect of a break inside mutex withLock.executor": "Run",
-    "Gradle.SimpleThreadPoolTests.simple work deliver and execution test.executor": "Run",
-    "Gradle.ThreadInterruptionTests.executor": "Run",
-    "Gradle.ThreadInterruptionTests.interrupt thread blocked on a sleep.executor": "Run",
-    "Gradle.ThreadInterruptionTests.interrupt thread in new state and start after.executor": "Run",
-    "Gradle.ThreadInterruptionTests.interrupt thread in new state.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/home/disciplinas/PC/2s2025-2026/src/2526v-li42d",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.2526v-li42d [:lab2:pt.isel.pc.synchro.Colored_threadsKt.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.2526v-li42d [:lab2:pt.isel.pc.synchro.Par_algsKt.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Build 2526v-li42d.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.QueueTests.multiple use with a single consumer and producer test.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.SimpleThreadPoolTests.effect of a break inside mutex withLock.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.SimpleThreadPoolTests.simple work deliver and execution test.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ThreadInterruptionTests.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ThreadInterruptionTests.interrupt thread blocked on a sleep.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ThreadInterruptionTests.interrupt thread in new state and start after.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ThreadInterruptionTests.interrupt thread in new state.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/home/disciplinas/PC/2s2025-2026/src/2526v-li42d&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\home\disciplinas\PC\2s2025-2026\src\2526v-li42d\lab2\src\main\kotlin\pt\isel\pc\utils" />
@@ -252,18 +267,47 @@
       <workItem from="1773417629015" duration="60000" />
       <workItem from="1773749101125" duration="5073000" />
       <workItem from="1773761810950" duration="8075000" />
+      <workItem from="1773829330644" duration="1214000" />
+      <workItem from="1773830580931" duration="124000" />
+      <workItem from="1773853776831" duration="695000" />
+      <workItem from="1774288542753" duration="1323000" />
+      <workItem from="1774349087253" duration="717000" />
     </task>
+    <task id="LOCAL-00001" summary="test integrated git on intellij">
+      <option name="closed" value="true" />
+      <created>1773829470075</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1773829470075</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="test integrated git on intellij" />
+    <option name="LAST_COMMIT_MESSAGE" value="test integrated git on intellij" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/lecture-03-17-timeout-and-cancellation/src/main/kotlin/pt/isel/pc/monitors/SemaphoreFifo.kt</url>
-          <line>28</line>
+          <line>33</line>
           <properties>
             <option name="lambda-ordinal" value="-1" />
           </properties>

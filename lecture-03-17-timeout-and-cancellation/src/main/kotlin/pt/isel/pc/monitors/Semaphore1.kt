@@ -4,6 +4,10 @@ import java.util.concurrent.locks.ReentrantLock
 import kotlin.concurrent.withLock
 import kotlin.time.Duration
 
+/**
+ * A single acquire/single release semaphore
+ * as an illustration of proper cancellation treatment on monitors
+ */
 class Semaphore1(initialPermits : Int) {
     private val mutex = ReentrantLock()
     private var permits = initialPermits
@@ -37,6 +41,9 @@ class Semaphore1(initialPermits : Int) {
                 } while (true)
             }
             catch(e: InterruptedException) {
+                // maybe we are signaled in simultaneous with interruption
+                // and in that case we need to transfer the signal to other
+                // (other way the signal could be lost).
                 if (permits > 0) {
                     hasPermits.signal()
                 }
@@ -48,6 +55,7 @@ class Semaphore1(initialPermits : Int) {
     fun release() {
        mutex.withLock {
            permits++
+           // just awake one, since it his a single release
            hasPermits.signal()
        }
     }
