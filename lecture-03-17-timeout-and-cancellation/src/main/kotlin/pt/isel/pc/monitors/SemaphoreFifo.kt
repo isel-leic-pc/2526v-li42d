@@ -14,7 +14,7 @@ class SemaphoreFifo(initialPermits: Int) {
     private var permits = initialPermits
     private val hasPermits = mutex.newCondition()
 
-    private class PendingAcquire(val units: Int)
+    private class PendingAcquire(val units: Int, done: Boolean = false)
 
     // wait queue needed by fair acquire
     private val pendingAcquires = LinkedList<PendingAcquire>()

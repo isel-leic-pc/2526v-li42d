@@ -5,10 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c6552ab8-0fa8-4e35-8724-391b87493993" name="Changes" comment="test integrated git on intellij">
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lecture-03-17-timeout-and-cancellation/src/main/kotlin/pt/isel/pc/monitors/Semaphore1.kt" beforeDir="false" afterPath="$PROJECT_DIR$/lecture-03-17-timeout-and-cancellation/src/main/kotlin/pt/isel/pc/monitors/Semaphore1.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lecture-03-17-timeout-and-cancellation/src/main/kotlin/pt/isel/pc/monitors/Semaphore2.kt" beforeDir="false" afterPath="$PROJECT_DIR$/lecture-03-17-timeout-and-cancellation/src/main/kotlin/pt/isel/pc/monitors/Semaphore2.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lecture-03-17-timeout-and-cancellation/src/main/kotlin/pt/isel/pc/monitors/CustomExchanger.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/lecture-03-17-timeout-and-cancellation/src/main/kotlin/pt/isel/pc/monitors/SemaphoreFifo.kt" beforeDir="false" afterPath="$PROJECT_DIR$/lecture-03-17-timeout-and-cancellation/src/main/kotlin/pt/isel/pc/monitors/SemaphoreFifo.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,8 +24,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Kotlin Class" />
         <option value="Class" />
+        <option value="Kotlin Class" />
       </list>
     </option>
   </component>
@@ -97,6 +98,9 @@
     <key name="K2MoveDeclarationsDialog.RECENT_PACKAGE_KEY">
       <recent name="pt.isel.pc.monitors" />
       <recent name="pt.isel.pc" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="" />
     </key>
   </component>
   <component name="RunManager" selected="Gradle.ThreadInterruptionTests.interrupt thread in new state and start after">
@@ -272,6 +276,8 @@
       <workItem from="1773853776831" duration="695000" />
       <workItem from="1774288542753" duration="1323000" />
       <workItem from="1774349087253" duration="717000" />
+      <workItem from="1774366573834" duration="745000" />
+      <workItem from="1774456256645" duration="11166000" />
     </task>
     <task id="LOCAL-00001" summary="test integrated git on intellij">
       <option name="closed" value="true" />
@@ -312,6 +318,15 @@
             <option name="lambda-ordinal" value="-1" />
           </properties>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-function">
+          <url>file://$PROJECT_DIR$/lecture-03-25-kernel-style/src/main/kotlin/pt/isel/pc/monitors/MyExchanger.kt</url>
+          <line>20</line>
+          <properties class="pt.isel.pc.monitors.MyExchanger" method="exchange">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
