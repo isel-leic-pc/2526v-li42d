@@ -10,6 +10,7 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/lab1" />
             <option value="$PROJECT_DIR$/lab2" />
+            <option value="$PROJECT_DIR$/lab3" />
             <option value="$PROJECT_DIR$/lecture-02-18-threads-intro" />
             <option value="$PROJECT_DIR$/lecture-02-24-synchro-intro" />
             <option value="$PROJECT_DIR$/lecture-03-03-control-synchronization-intro" />
@@ -17,6 +18,7 @@
             <option value="$PROJECT_DIR$/lecture-03-11-more-monitors" />
             <option value="$PROJECT_DIR$/lecture-03-17-timeout-and-cancellation" />
             <option value="$PROJECT_DIR$/lecture-03-25-kernel-style" />
+            <option value="$PROJECT_DIR$/lecture-03-31-kernel-style2" />
           </set>
         </option>
       </GradleProjectSettings>

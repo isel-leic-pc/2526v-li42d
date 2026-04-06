@@ -7,8 +7,6 @@
     <list default="true" id="c6552ab8-0fa8-4e35-8724-391b87493993" name="Changes" comment="test integrated git on intellij">
       <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lecture-03-17-timeout-and-cancellation/src/main/kotlin/pt/isel/pc/monitors/CustomExchanger.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lecture-03-17-timeout-and-cancellation/src/main/kotlin/pt/isel/pc/monitors/SemaphoreFifo.kt" beforeDir="false" afterPath="$PROJECT_DIR$/lecture-03-17-timeout-and-cancellation/src/main/kotlin/pt/isel/pc/monitors/SemaphoreFifo.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -277,7 +275,10 @@
       <workItem from="1774288542753" duration="1323000" />
       <workItem from="1774349087253" duration="717000" />
       <workItem from="1774366573834" duration="745000" />
-      <workItem from="1774456256645" duration="11166000" />
+      <workItem from="1774456256645" duration="12687000" />
+      <workItem from="1774966714827" duration="137000" />
+      <workItem from="1775058667674" duration="391000" />
+      <workItem from="1775059773681" duration="3018000" />
     </task>
     <task id="LOCAL-00001" summary="test integrated git on intellij">
       <option name="closed" value="true" />
