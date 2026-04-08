@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="GradleMigrationSettings" migrationVersion="1" />
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
@@ -18,7 +17,7 @@
             <option value="$PROJECT_DIR$/lecture-03-11-more-monitors" />
             <option value="$PROJECT_DIR$/lecture-03-17-timeout-and-cancellation" />
             <option value="$PROJECT_DIR$/lecture-03-25-kernel-style" />
-            <option value="$PROJECT_DIR$/lecture-03-31-kernel-style2" />
+            <option value="$PROJECT_DIR$/lecture-04-01-echo-server-scoped" />
           </set>
         </option>
       </GradleProjectSettings>

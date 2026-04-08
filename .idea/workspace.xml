@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c6552ab8-0fa8-4e35-8724-391b87493993" name="Changes" comment="test integrated git on intellij">
+    <list default="true" id="1ae0ffbe-1655-42c0-919b-6f9799228ffc" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lecture-03-31-kernel-style2/build.gradle.kts" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -19,38 +20,26 @@
       <ProjectState />
     </projectState>
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-        <option value="Kotlin Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;jmartins3&quot;
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "jmartins3"
   }
-}</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/isel-leic-pc/2526v-li42d.git&quot;,
-    &quot;accountId&quot;: &quot;ad2558f6-2cad-46de-a407-30e8ec8b7be9&quot;
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/isel-leic-pc/2526v-li42d.git",
+    "accountId": "ad2558f6-2cad-46de-a407-30e8ec8b7be9"
   }
-}</component>
+}]]></component>
   <component name="GradleScriptDefinitionsStorage" workingDir="$PROJECT_DIR$" gradleHome="C:\Users\jmart\.gradle\wrapper\dists\gradle-9.3.1-bin\23ovyewtku6u96viwx3xl3oks\gradle-9.3.1" javaHome="C:\Users\jmart\.jdks\openjdk-25.0.2" gradleVersion="9.3.1" />
-  <component name="KubernetesApiPersistence">{}</component>
-  <component name="KubernetesApiProvider">{
-  &quot;isMigrated&quot;: true
-}</component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 5
-}</component>
-  <component name="ProjectId" id="3ARKhHnODDf8hE6xnITxH1y9AJa" />
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 5
+}]]></component>
+  <component name="ProjectId" id="3C4UlJw0QKP7yfSOf5HBqelncVh" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
   </component>
@@ -58,185 +47,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Gradle.2526v-li42d [:lab2:pt.isel.pc.synchro.Colored_threadsKt.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.2526v-li42d [:lab2:pt.isel.pc.synchro.Par_algsKt.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Build 2526v-li42d.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.QueueTests.multiple use with a single consumer and producer test.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.SimpleThreadPoolTests.effect of a break inside mutex withLock.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.SimpleThreadPoolTests.simple work deliver and execution test.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.ThreadInterruptionTests.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.ThreadInterruptionTests.interrupt thread blocked on a sleep.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.ThreadInterruptionTests.interrupt thread in new state and start after.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.ThreadInterruptionTests.interrupt thread in new state.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/home/disciplinas/PC/2s2025-2026/src/2526v-li42d&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.2526v-li42d [:lecture-04-01-echo-server-scoped:pt.isel.pc.EchoServerScopedKt.main()].executor": "Run",
+    "Gradle.Build 2526v-li42d.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/home/disciplinas/PC/2s2025-2026/src/2526v-li42d/lecture-04-01-echo-server-scoped/src/main/kotlin/pt/isel/pc",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\home\disciplinas\PC\2s2025-2026\src\2526v-li42d\lab2\src\main\kotlin\pt\isel\pc\utils" />
-      <recent name="C:\home\disciplinas\PC\2s2025-2026\src\2526v-li42d\lab2\src\main\kotlin\pt\isel\pc\synchro" />
+      <recent name="C:\home\disciplinas\PC\2s2025-2026\src\2526v-li42d\lecture-04-01-echo-server-scoped\src\main\kotlin\pt\isel\pc" />
     </key>
     <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
-      <recent name="pt.isel.pc.monitors" />
-      <recent name="pt.isel.pc.synchro" />
-    </key>
-    <key name="K2MoveDeclarationsDialog.RECENT_PACKAGE_KEY">
-      <recent name="pt.isel.pc.monitors" />
       <recent name="pt.isel.pc" />
     </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="" />
-    </key>
-  </component>
-  <component name="RunManager" selected="Gradle.ThreadInterruptionTests.interrupt thread in new state and start after">
-    <configuration name="ThreadInterruptionTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":lecture-03-17-timeout-and-cancellation:test" />
-            <option value="--tests" />
-            <option value="&quot;pt.isel.pc.threads.ThreadInterruptionTests&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <ExternalSystemDebugDisabled>false</ExternalSystemDebugDisabled>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <GradleProfilingDisabled>false</GradleProfilingDisabled>
-      <GradleCoverageDisabled>false</GradleCoverageDisabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="ThreadInterruptionTests.interrupt thread blocked on a sleep" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":lecture-03-17-timeout-and-cancellation:test" />
-            <option value="--tests" />
-            <option value="&quot;pt.isel.pc.threads.ThreadInterruptionTests.interrupt thread blocked on a sleep&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <ExternalSystemDebugDisabled>false</ExternalSystemDebugDisabled>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <GradleProfilingDisabled>false</GradleProfilingDisabled>
-      <GradleCoverageDisabled>false</GradleCoverageDisabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="ThreadInterruptionTests.interrupt thread in new state and start after" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":lecture-03-17-timeout-and-cancellation:test" />
-            <option value="--tests" />
-            <option value="&quot;pt.isel.pc.threads.ThreadInterruptionTests.interrupt thread in new state and start after&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <ExternalSystemDebugDisabled>false</ExternalSystemDebugDisabled>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <GradleProfilingDisabled>false</GradleProfilingDisabled>
-      <GradleCoverageDisabled>false</GradleCoverageDisabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="ThreadInterruptionTests.interrupt thread in new state" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":lecture-03-17-timeout-and-cancellation:test" />
-            <option value="--tests" />
-            <option value="&quot;pt.isel.pc.threads.ThreadInterruptionTests.interrupt thread in new state&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <ExternalSystemDebugDisabled>false</ExternalSystemDebugDisabled>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <GradleProfilingDisabled>false</GradleProfilingDisabled>
-      <GradleCoverageDisabled>false</GradleCoverageDisabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="Colored_threadsKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="pt.isel.pc.synchro.Colored_threadsKt" />
-      <module name="2526v-li42d.lab2.main" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="2526v-li42d" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="2526v-li42d" />
-      <option name="filePath" />
-      <method v="2" />
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Gradle.ThreadInterruptionTests.interrupt thread in new state and start after" />
-        <item itemvalue="Gradle.ThreadInterruptionTests.interrupt thread in new state" />
-        <item itemvalue="Gradle.ThreadInterruptionTests.interrupt thread blocked on a sleep" />
-        <item itemvalue="Gradle.ThreadInterruptionTests" />
-        <item itemvalue="Kotlin.Colored_threadsKt" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -248,88 +80,16 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="c6552ab8-0fa8-4e35-8724-391b87493993" name="Changes" comment="" />
-      <created>1772550061090</created>
+      <changelist id="1ae0ffbe-1655-42c0-919b-6f9799228ffc" name="Changes" comment="" />
+      <created>1775644485365</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1772550061090</updated>
-      <workItem from="1772550062153" duration="993000" />
-      <workItem from="1772552165883" duration="8056000" />
-      <workItem from="1772572022765" duration="138000" />
-      <workItem from="1772572553397" duration="5674000" />
-      <workItem from="1772640714222" duration="2303000" />
-      <workItem from="1772643939098" duration="2141000" />
-      <workItem from="1772657981718" duration="36000" />
-      <workItem from="1773056874923" duration="2130000" />
-      <workItem from="1773155015201" duration="8913000" />
-      <workItem from="1773184435442" duration="3698000" />
-      <workItem from="1773245693106" duration="1999000" />
-      <workItem from="1773248212104" duration="5803000" />
-      <workItem from="1773396346129" duration="5426000" />
-      <workItem from="1773417629015" duration="60000" />
-      <workItem from="1773749101125" duration="5073000" />
-      <workItem from="1773761810950" duration="8075000" />
-      <workItem from="1773829330644" duration="1214000" />
-      <workItem from="1773830580931" duration="124000" />
-      <workItem from="1773853776831" duration="695000" />
-      <workItem from="1774288542753" duration="1323000" />
-      <workItem from="1774349087253" duration="717000" />
-      <workItem from="1774366573834" duration="745000" />
-      <workItem from="1774456256645" duration="12687000" />
-      <workItem from="1774966714827" duration="137000" />
-      <workItem from="1775058667674" duration="391000" />
-      <workItem from="1775059773681" duration="3018000" />
+      <updated>1775644485365</updated>
+      <workItem from="1775644486432" duration="2533000" />
     </task>
-    <task id="LOCAL-00001" summary="test integrated git on intellij">
-      <option name="closed" value="true" />
-      <created>1773829470075</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1773829470075</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="test integrated git on intellij" />
-    <option name="LAST_COMMIT_MESSAGE" value="test integrated git on intellij" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/lecture-03-17-timeout-and-cancellation/src/main/kotlin/pt/isel/pc/monitors/SemaphoreFifo.kt</url>
-          <line>33</line>
-          <properties>
-            <option name="lambda-ordinal" value="-1" />
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-function">
-          <url>file://$PROJECT_DIR$/lecture-03-25-kernel-style/src/main/kotlin/pt/isel/pc/monitors/MyExchanger.kt</url>
-          <line>20</line>
-          <properties class="pt.isel.pc.monitors.MyExchanger" method="exchange">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
