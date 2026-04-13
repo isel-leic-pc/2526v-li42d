@@ -1,13 +1,16 @@
 package pt.isel.pc.monitors
 
+import java.util.concurrent.locks.ReentrantLock
+import kotlin.concurrent.withLock
 import kotlin.time.Duration
 
 /**
- * The gate synchronizer
- * Must guarantee the all threads blocked
- * in "await" operation proceed after "open" operation
+ * The gate synchronizer.
+ * It must guarantee the all threads blocked
+ * in "await" operation (because the gate is closed)
+ * must proceed after "open" operation
  */
-class Gate {
+class Gate(initialState : Boolean = false) {
 
     /*
      * when the gate is opened
@@ -23,14 +26,14 @@ class Gate {
      * the "await" blocks until the next "open" operation
      */
     fun close() {
-        TODO()
+       TODO()
     }
 
     /**
      * if the gate is opened  proceed immediately,
      * otherwise blocks until the next open operation
      */
-    fun await(timeout: Duration) : Boolean {
+    fun await(timeout: Duration = Duration.INFINITE) : Boolean {
         TODO()
     }
 }

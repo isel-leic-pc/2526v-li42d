@@ -7,8 +7,7 @@
     <list default="true" id="1ae0ffbe-1655-42c0-919b-6f9799228ffc" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lecture-03-31-kernel-style2/build.gradle.kts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab3/src/main/kotlin/pt/isel/pc/monitors/Gate.kt" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/src/main/kotlin/pt/isel/pc/monitors/Gate.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,25 +19,32 @@
       <ProjectState />
     </projectState>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "jmartins3"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;jmartins3&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/isel-leic-pc/2526v-li42d.git",
-    "accountId": "ad2558f6-2cad-46de-a407-30e8ec8b7be9"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/isel-leic-pc/2526v-li42d.git&quot;,
+    &quot;accountId&quot;: &quot;ad2558f6-2cad-46de-a407-30e8ec8b7be9&quot;
   }
-}]]></component>
+}</component>
   <component name="GradleScriptDefinitionsStorage" workingDir="$PROJECT_DIR$" gradleHome="C:\Users\jmart\.gradle\wrapper\dists\gradle-9.3.1-bin\23ovyewtku6u96viwx3xl3oks\gradle-9.3.1" javaHome="C:\Users\jmart\.jdks\openjdk-25.0.2" gradleVersion="9.3.1" />
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 5
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="3C4UlJw0QKP7yfSOf5HBqelncVh" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -51,6 +57,8 @@
   "keyToString": {
     "Gradle.2526v-li42d [:lecture-04-01-echo-server-scoped:pt.isel.pc.EchoServerScopedKt.main()].executor": "Run",
     "Gradle.Build 2526v-li42d.executor": "Run",
+    "Gradle.CyclicBarrierTests.cyclic barrier stress test.executor": "Run",
+    "Gradle.GateTests.gate stress test.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -58,7 +66,8 @@
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/home/disciplinas/PC/2s2025-2026/src/2526v-li42d/lecture-04-01-echo-server-scoped/src/main/kotlin/pt/isel/pc",
+    "last_opened_file_path": "C:/home/disciplinas/PC/2s2025-2026/src/2526v-li42d",
+    "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -69,6 +78,68 @@
     <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
       <recent name="pt.isel.pc" />
     </key>
+  </component>
+  <component name="RunManager" selected="Gradle.GateTests.gate stress test">
+    <configuration name="CyclicBarrierTests.cyclic barrier stress test" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":lab3:test" />
+            <option value="--tests" />
+            <option value="&quot;pt.isel.pc.monitors.CyclicBarrierTests.cyclic barrier stress test&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <ExternalSystemDebugDisabled>false</ExternalSystemDebugDisabled>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <GradleProfilingDisabled>false</GradleProfilingDisabled>
+      <GradleCoverageDisabled>false</GradleCoverageDisabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="GateTests.gate stress test" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":lab3:test" />
+            <option value="--tests" />
+            <option value="&quot;pt.isel.pc.monitors.GateTests.gate stress test&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <ExternalSystemDebugDisabled>false</ExternalSystemDebugDisabled>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <GradleProfilingDisabled>false</GradleProfilingDisabled>
+      <GradleCoverageDisabled>false</GradleCoverageDisabled>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.GateTests.gate stress test" />
+        <item itemvalue="Gradle.CyclicBarrierTests.cyclic barrier stress test" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -86,6 +157,7 @@
       <option name="presentableId" value="Default" />
       <updated>1775644485365</updated>
       <workItem from="1775644486432" duration="2533000" />
+      <workItem from="1776097068037" duration="7185000" />
     </task>
     <servers />
   </component>
