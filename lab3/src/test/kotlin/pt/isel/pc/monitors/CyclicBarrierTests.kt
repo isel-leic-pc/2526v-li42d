@@ -12,7 +12,9 @@ import kotlin.time.DurationUnit
 import kotlin.time.toDuration
 
 class CyclicBarrierTests {
-
+    /**
+     * test comment
+     */
     @Test
     fun `cyclic barrier stress test`() {
 
