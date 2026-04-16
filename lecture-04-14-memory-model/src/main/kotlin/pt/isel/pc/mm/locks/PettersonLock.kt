@@ -4,7 +4,7 @@ class PettersonLock {
 
 
     private val interested =  Array(2) { false}
-
+    @Volatile
     private var turn = 0
 
     private fun other (index: Int) : Int =

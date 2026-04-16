@@ -67,22 +67,25 @@ class Done3 {
     fun get() : Boolean = ready
 }
 
-private var result = 0
-private var ready = false
+var done = Done0()
+var result  = 0
 
 fun main() {
     logger.info("Start!")
 
     val t = Thread {
-        while(!ready);
+        while(!done.get());
         logger.info("number: $result")
     }
 
-    t.start()
-    sleep(10)
-    ready = true
-    result = 42
 
+
+    t.start()
+      sleep(20)
+
+     done.set()
+         result = 42
+  
     t.join()
     logger.info("Done!")
 }

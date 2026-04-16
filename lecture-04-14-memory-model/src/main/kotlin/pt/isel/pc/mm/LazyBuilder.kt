@@ -35,8 +35,8 @@ class Lazy1<T>(private val factory : () -> T): LazyBuilder<T> {
             if (value == null) {
                 value = factory()
             }
+            return value!!
         }
-        return value!!
     }
 }
 
@@ -47,7 +47,7 @@ class Lazy1<T>(private val factory : () -> T): LazyBuilder<T> {
 class Lazy2<T>(private val factory : () -> T) : LazyBuilder<T> {
     val lock = ReentrantLock()
 
-    //@Volatile
+    @Volatile
     private var value : T? = null
 
     override fun get() : T {
