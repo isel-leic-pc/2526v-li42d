@@ -2,27 +2,29 @@ package pt.isel.pc.coroutines.basics
 
 
 import mu.KotlinLogging
+import java.lang.Thread.sleep
 import kotlin.coroutines.Continuation
 import kotlin.coroutines.createCoroutine
 import kotlin.coroutines.EmptyCoroutineContext
+import kotlin.coroutines.suspendCoroutine
 
 
 private val logger = KotlinLogging.logger {}
 
 suspend fun hello_msg() : String {
 
-//    suspendCoroutine<Unit> {
-//        cont ->
-//        logger.info("before  suspension")
-//        Thread {
-//            sleep(1000)
-//            cont.resumeWith(Result.success(Unit))
-//            logger.info("after first resume")
-//        }
-//        .start()
-//
-//    }
-//    logger.info("after  suspension")
+    suspendCoroutine<Unit> {
+        cont ->
+        logger.info("before  suspension")
+        Thread {
+            sleep(1000)
+            cont.resumeWith(Result.success(Unit))
+            logger.info("after first resume")
+        }
+        .start()
+
+    }
+    logger.info("after  suspension")
 
     return "Hello World!"
 }
