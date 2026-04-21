@@ -129,7 +129,7 @@ class CoroutinesBaseTests {
         val res = f2Normal(completion)
 
         logger.info("f2Normal returned $res")
-        notResumedContinuation?.resume(Unit)
+        // notResumedContinuation?.resume(Unit)
 
     }
 
@@ -151,8 +151,8 @@ class CoroutinesBaseTests {
         val lambda1 : suspend () -> Unit = {
             var teams = listOf("Benfica", "Real Madrid", "Manchester United")
             for (t in teams) {
-                //print("$t: ")
-                logger.info("$t: ")
+                print("$t: ")
+                //logger.info("$t: ")
                 suspendCoroutine<Unit> {
                     cont ->
                         continuations.addLast(cont)
@@ -164,6 +164,7 @@ class CoroutinesBaseTests {
             var countries = listOf("Portugal", "Spain", "England")
             for (c in countries) {
                 println(c)
+                //logger.info(c)
                 suspendCoroutine<Unit> {
                         cont : Continuation<Unit> ->
                             continuations.addLast(cont)
