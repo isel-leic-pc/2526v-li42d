@@ -26,8 +26,6 @@ class CoroutinesBaseTests {
         return i1 + i2
     }
 
-
-
     @Test
     fun `call a suspend function without suspensions`() {
         val completion = object: Continuation<Int>  {
