@@ -23,5 +23,65 @@ class SimpleThreadPoolTests {
     }
 
 
+    @Test
+    fun `test with a simple continuation`() {
+        val pool = SimpleThreadPool(10, 1.toDuration(DurationUnit.MINUTES))
+        var res = 0
+        val latch = CountDownLatch(1)
+
+        val cont = object: Continuation<Unit> {
+            override val context: CoroutineContext
+                get() = EmptyCoroutineContext
+
+            override fun resumeWith(result: Result<Unit>) {
+                res++
+                logger.info("cont resumed on pool")
+                latch.countDown()
+            }
+        }
+
+//      the commented code below illustrates the use of Continuation constructor function
+//      that produces an implementation of Continuation interface analogous to the
+//      one above.
+
+//        val cont2 = Continuation<Unit>(EmptyCoroutineContext) {
+//             res++
+//             logger.info("cont resumed on pool")
+//             latch.countDown()
+//        }
+
+        pool.execute(cont)
+
+        latch.await(2000, TimeUnit.MILLISECONDS)
+        logger.info("on test, get the result")
+        assertEquals(1, res)
+
+    }
+
+    @Test
+    fun `test with a simple continuation using invoke`() {
+        val pool = SimpleThreadPool(10, 1.toDuration(DurationUnit.MINUTES))
+        var res = 0
+        val latch = CountDownLatch(1)
+
+        val cont = Continuation<Unit>(EmptyCoroutineContext) {
+            latch.countDown()
+        }
+
+        val corLambda : suspend () -> Unit = {
+            res = pool.invoke {
+                logger.info("on pool, result produced")
+                res + 1
+            }
+        }
+        corLambda.startCoroutine(cont)
+        latch.await(2000, TimeUnit.MILLISECONDS)
+
+        logger.info("on test, get the result")
+        assertEquals(1, res)
+
+    }
+
+
 
 }
