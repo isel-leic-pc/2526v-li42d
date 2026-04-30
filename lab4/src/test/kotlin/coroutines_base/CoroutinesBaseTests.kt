@@ -133,7 +133,7 @@ class CoroutinesBaseTests {
 
 
     @Test
-    fun `two coroutines simultaneously working on same thread`() {
+    fun `two coroutines concurrently working on same thread`() {
 
         val continuations = ArrayDeque<Continuation<Unit>>()
 
