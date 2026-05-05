@@ -2,8 +2,8 @@ package pt.isel.pc.asyncio
 
 import mu.KotlinLogging
 import org.junit.jupiter.api.Test
-import pt.isel.pc.asyncio.async_sockets.AsyncSocketCF
-import pt.isel.pc.asyncio.async_sockets.AsyncSocketCb
+import pt.isel.pc.asyncio2.async_sockets.AsyncSocketCF
+import pt.isel.pc.asyncio2.async_sockets.AsyncSocketCb
 import java.net.InetSocketAddress
 import java.net.Socket
 import java.util.concurrent.CountDownLatch
@@ -113,5 +113,10 @@ class AsyncIOTests {
 
         cdl.await()
         logger.info("done!")
+    }
+
+    @Test
+    fun `a raw http request using socket operations that return completable futures supported by NIO2`() {
+        TODO()
     }
 }

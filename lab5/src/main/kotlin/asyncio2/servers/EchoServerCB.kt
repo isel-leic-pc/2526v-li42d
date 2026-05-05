@@ -1,9 +1,9 @@
-package pt.isel.pc.asyncio.servers
+package pt.isel.pc.asyncio2.servers
 
 import mu.KotlinLogging
-import pt.isel.pc.asyncio.nio2.acceptAsync
-import pt.isel.pc.asyncio.nio2.readAsync
-import pt.isel.pc.asyncio.nio2.writeAsync
+import pt.isel.pc.asyncio2.nio2.acceptAsync
+import pt.isel.pc.asyncio2.nio2.readAsync
+import pt.isel.pc.asyncio2.nio2.writeAsync
 
 import java.io.BufferedWriter
 import java.io.IOException

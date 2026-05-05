@@ -3,18 +3,16 @@
  * a suspend API to NIO2 socket channels
  */
 
-package pt.isel.pc.asyncio.servers
+package pt.isel.pc.asyncio2.servers
 
 import mu.KotlinLogging
-import pt.isel.pc.asyncio.nio2.readLine
-import pt.isel.pc.asyncio.nio2.writeLine
-import pt.isel.pc.asyncio.nio2.acceptSuspend
+import pt.isel.pc.asyncio2.nio2.readLine
+import pt.isel.pc.asyncio2.nio2.writeLine
+import pt.isel.pc.asyncio2.nio2.acceptSuspend
 
 import java.net.InetSocketAddress
-import java.nio.channels.AsynchronousChannelGroup
 import java.nio.channels.AsynchronousServerSocketChannel
 import java.nio.channels.AsynchronousSocketChannel
-import java.util.concurrent.Executors
 import kotlin.coroutines.Continuation
 import kotlin.coroutines.EmptyCoroutineContext
 import kotlin.coroutines.startCoroutine

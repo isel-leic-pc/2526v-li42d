@@ -1,4 +1,4 @@
-package pt.isel.pc.asyncio.nio2
+package pt.isel.pc.asyncio2.nio2
 
 import mu.KotlinLogging
 import java.net.InetSocketAddress

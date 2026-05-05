@@ -1,4 +1,4 @@
-package pt.isel.pc.asyncio.servers
+package pt.isel.pc.asyncio2.servers
 
 import mu.KotlinLogging
 import java.io.*
@@ -6,7 +6,6 @@ import java.net.InetSocketAddress
 import java.net.ServerSocket
 import java.net.Socket
 import java.util.concurrent.Semaphore
-import java.util.concurrent.atomic.AtomicLong
 
 /**
  * A server with a poor solution to limit the number

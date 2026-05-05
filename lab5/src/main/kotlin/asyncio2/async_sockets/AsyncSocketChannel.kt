@@ -1,9 +1,6 @@
-package pt.isel.pc.asyncio.async_sockets
+package pt.isel.pc.asyncio2.async_sockets
 
-import pt.isel.pc.asyncio.nio2.connectAsync
-import java.net.InetSocketAddress
 import java.nio.channels.AsynchronousSocketChannel
-import java.util.concurrent.CompletableFuture
 
 /**
  * A partial implementation of an asynchronous socket API

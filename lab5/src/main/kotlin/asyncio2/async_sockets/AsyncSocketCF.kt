@@ -1,4 +1,4 @@
-package pt.isel.pc.asyncio.async_sockets
+package pt.isel.pc.asyncio2.async_sockets
 
 import java.net.Socket
 import java.net.SocketAddress
