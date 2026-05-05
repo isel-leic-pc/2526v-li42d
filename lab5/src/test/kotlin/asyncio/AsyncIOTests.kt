@@ -114,4 +114,9 @@ class AsyncIOTests {
         cdl.await()
         logger.info("done!")
     }
+
+    @Test
+    fun `a raw http request using socket operations that return completable futures supported by NIO2`() {
+        TODO()
+    }
 }

@@ -69,7 +69,6 @@ private val connectCompletedCF = object  : CompletionHandler<Void?, CompletableF
 
 private val acceptCompletedCF = object : CompletionHandler<AsynchronousSocketChannel?,
         CompletableFuture<AsynchronousSocketChannel>> {
-
     override fun completed(result: AsynchronousSocketChannel?,
                            attach: CompletableFuture<AsynchronousSocketChannel>) {
          attach.complete(result)
@@ -81,7 +80,6 @@ private val acceptCompletedCF = object : CompletionHandler<AsynchronousSocketCha
 }
 
 private val rwCompletedCF = object  : CompletionHandler<Int?, CompletableFuture<Int>> {
-
     override fun completed(result: Int?, attach: CompletableFuture<Int>) {
         attach.complete(result)
     }
