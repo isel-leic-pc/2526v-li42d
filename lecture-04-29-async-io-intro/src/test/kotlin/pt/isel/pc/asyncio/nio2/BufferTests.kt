@@ -3,7 +3,6 @@ package pt.isel.pc.asyncio.nio2
 import mu.KotlinLogging
 import org.junit.jupiter.api.Test
 import java.nio.ByteBuffer
-import java.nio.charset.Charset
 
 
 class BufferTests {
@@ -36,47 +35,10 @@ class BufferTests {
         logBB("after get $b", bb)
         b = bb.get()
         logBB("after get $b", bb)
+
         b = bb.get()
         logBB("after get $b", bb)
         bb.clear()
         logBB("after clear", bb)
-    }
-
-    @Test
-    fun `a light less simple buffer use example`() {
-        // Create
-        val charSet = Charset.forName("UTF8")
-        val decoder = charSet.newDecoder()
-
-        val bb = ByteBuffer.allocate(32)
-        logBB("after allocate", bb)
-
-        val text = "produção"
-        bb.put(charSet.encode(text))
-        logBB("after put 1", bb)
-
-        // Write
-        bb.put(46)
-        logBB("after put 2", bb)
-
-
-        val byteArray = ByteArray(10) {
-                index -> (index+65).toByte()
-        }
-
-        bb.put(byteArray)
-        logBB("after put 2", bb)
-
-        // Read
-        bb.flip()
-        logBB("after flip", bb)
-        val  charBuf = decoder.decode(bb)
-        logBB("after decode", bb)
-
-        // Clear
-        bb.clear()
-        logBB("after clear", bb)
-
-        logger.info("charBuf content='$charBuf'")
     }
 }
