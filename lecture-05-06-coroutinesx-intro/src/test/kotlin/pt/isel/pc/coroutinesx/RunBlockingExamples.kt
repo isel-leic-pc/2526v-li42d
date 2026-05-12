@@ -3,6 +3,7 @@ package pt.isel.pc.coroutinesx
 import kotlinx.coroutines.CompletableJob
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
+import kotlinx.coroutines.currentCoroutineContext
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
@@ -80,12 +81,15 @@ class RunBlockingExamples {
 
     @Test
     fun `manually created scope`() {
-       val scope = CoroutineScope(EmptyCoroutineContext)
+        val scope = CoroutineScope(EmptyCoroutineContext)
 
-       val job = scope.coroutineContext[Job]
+        val job = scope.coroutineContext[Job]
 
+        println(job)
 
-
-
+        scope.launch {
+            println(currentCoroutineContext()[Job]?.parent)
+        }
+        sleep(2000)
     }
 }
