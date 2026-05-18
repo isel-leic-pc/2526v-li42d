@@ -1,22 +1,16 @@
 package pt.isel.pc.coroutines
 
-import kotlinx.coroutines.CoroutineName
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.TimeoutCancellationException
-import kotlinx.coroutines.currentCoroutineContext
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
-import kotlinx.coroutines.sync.Semaphore
-import kotlinx.coroutines.withContext
-import kotlinx.coroutines.withTimeout
 import mu.KotlinLogging
 import org.junit.jupiter.api.Test
 import pt.isel.pc.coroutines.utils.getInfo
 import pt.isel.pc.coroutines.utils.state
-import kotlin.coroutines.coroutineContext
-import pt.isel.pc.coroutines.asynchronizers.SemaphoreCR0
+import pt.isel.pc.coroutines.asynchronizers.SemaphoreCR
 import kotlin.time.Duration.Companion.seconds
 
 class CancellationTests {
@@ -77,7 +71,7 @@ class CancellationTests {
     @Test
     fun `a  simple Semaphore use`() {
         runBlocking {
-            val sem = SemaphoreCR0(0)
+            val sem = SemaphoreCR(0)
             val child = launch {
                 logger.info("start child")
                 try {

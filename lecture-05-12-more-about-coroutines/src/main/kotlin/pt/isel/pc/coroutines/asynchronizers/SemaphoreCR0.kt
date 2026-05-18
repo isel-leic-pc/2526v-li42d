@@ -1,94 +1,73 @@
 package pt.isel.pc.coroutines.asynchronizers
 
-import kotlinx.coroutines.CancellableContinuation
-import kotlinx.coroutines.CancellationException
-import kotlinx.coroutines.TimeoutCancellationException
-import kotlinx.coroutines.suspendCancellableCoroutine
-import kotlinx.coroutines.withTimeout
-import java.util.LinkedList
+import pt.isel.pc.coroutines.asynchronizers.SemaphoreCR.PendingAcquire
+import java.util.*
 import java.util.concurrent.locks.ReentrantLock
 import kotlin.concurrent.withLock
 import kotlin.coroutines.Continuation
 import kotlin.coroutines.resume
 import kotlin.coroutines.suspendCoroutine
-import kotlin.time.Duration
 
 /**
- * initial version os SemaphoreCR
+ * initial version without support for cancellation
+ * and resumes inside lock
+ * (not good)
  */
 class SemaphoreCR0(initialUnits : Int) {
-    val mutex = ReentrantLock  ()
-    var currentPermits = initialUnits
     init {
         require(initialUnits >= 0)
     }
-    class PendingAcquire(val units: Int,
-                         val cont: CancellableContinuation<Unit>,
-                        var done: Boolean = false)
+    private var permits = initialUnits
+    private val lock = ReentrantLock()
 
-    // list of pending acquire continuations
-    val pendingAcquires = LinkedList<PendingAcquire>()
+    private class Request(val units: Int,
+                          val cont : Continuation<Unit>)
 
-    suspend fun acquire(units: Int, timeout: Duration = Duration.INFINITE)  {
-        var pendingAcquire: PendingAcquire? = null
-        try {
-           withTimeout(timeout) {
-               suspendCancellableCoroutine<Unit> {
-                   cont ->
+    private val requests = LinkedList<Request>()
 
-                    // Just ignore invokeOnCancellation since we resolve everithing on CancellationException catch
-                    //               cont.invokeOnCancellation {
-                    //                   mutex.withLock {
-                    //                       pendingAcquire?.done = true
-                    //                       pendingAcquires.remove(pendingAcquire)
-                    //                   }
-                    //               }
+    suspend fun acquire(units: Int) {
+        lock.lock()
 
-                   mutex.withLock {
-                       if (currentPermits >= units) {
-                           currentPermits -= units
-                           cont
-                       } else {
-                           pendingAcquire = PendingAcquire(units, cont)
-                           pendingAcquires.add(pendingAcquire)
-                       }
-                   }
-               }
-           }
-
-        }
-        catch(e: TimeoutCancellationException ) {
-            mutex.withLock {
-                if (pendingAcquire?.done!!) return
-                pendingAcquires.remove(pendingAcquire)
-                throw e
+        suspendCoroutine<Unit> {
+            cont ->
+            lock.withLock {
+                if (permits >= units) {
+                    // fast path
+                    permits -= units
+                    // this resume within the lock is not dangerous
+                    // since it is just a marcar for internal state
+                    // telling that it has just a synchronous return
+                    cont.resume(Unit)
+                } else {
+                    // suspend path
+                    requests.add(Request(units, cont))
+                }
             }
+
         }
-        catch(e: CancellationException) {
-           mutex.withLock {
-               if (pendingAcquire?.done!!) return
-               pendingAcquires.remove(pendingAcquire)
-               throw e
-           }
+
+    }
+    
+    private fun tryResolveRequests() : List<Request> {
+        val resolved = mutableListOf<Request>()
+        while(requests.isNotEmpty() &&
+            requests.first().units <= permits) {
+            val r = requests.removeFirst()
+            permits -= r.units
+            resolved.add(r)
         }
+        return resolved
     }
 
-    fun release(units: Int) {
-        val resolved = mutex.withLock {
-            currentPermits+= units
-            val list = mutableListOf<PendingAcquire>()
-            while(pendingAcquires.isNotEmpty() &&
-                  pendingAcquires.first().units <= currentPermits) {
-                val pa = pendingAcquires.removeFirst()
-                currentPermits -= pa.units
-                pa.done = true
-                list.add(pa)
-            }
-            list
+    suspend fun release(units: Int) {
+        val resolved = lock.withLock {
+            permits += units
+            tryResolveRequests()
         }
-        // best to do resumes out of lock
-        for(pa in resolved) {
-            pa.cont.resume(Unit)
+
+        // resume resolved acquires
+        for(r in resolved) {
+            r.cont.resume(Unit)
         }
     }
 }

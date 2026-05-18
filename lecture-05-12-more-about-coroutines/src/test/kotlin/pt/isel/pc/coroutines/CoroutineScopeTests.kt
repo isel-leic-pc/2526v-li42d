@@ -1,7 +1,6 @@
 package pt.isel.pc.coroutines
 
 import kotlinx.coroutines.CoroutineName
-import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.TimeoutCancellationException
 import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.delay
@@ -11,10 +10,8 @@ import kotlinx.coroutines.withContext
 import kotlinx.coroutines.withTimeout
 import mu.KotlinLogging
 import org.junit.jupiter.api.Test
-import pt.isel.pc.coroutines.asynchronizers.SemaphoreCR0
 
 import pt.isel.pc.coroutines.utils.getInfo
-import kotlin.coroutines.EmptyCoroutineContext
 import kotlin.time.Duration.Companion.seconds
 
 class CoroutineScopeTests {
@@ -22,6 +19,7 @@ class CoroutineScopeTests {
         private val logger = KotlinLogging.logger {}
     }
 
+    // using coroutineScope to create an inner scope
     suspend private fun f1() {
         //val scope = CoroutineScope(EmptyCoroutineContext)
        coroutineScope {
@@ -53,6 +51,7 @@ class CoroutineScopeTests {
         }
     }
 
+    // no using a corroutineScope with modified context (withContext)
     suspend private fun f2() {
 
         withContext(CoroutineName("withContext Name")) {
