@@ -13,7 +13,7 @@ import kotlin.time.Duration
 
 /**
  * A cancellable version of SemaphoreCR
- * and resumes out of the lock
+ * that resumes out of the lock
  * (better)
  */
 class SemaphoreCR(initialUnits : Int,
@@ -50,31 +50,35 @@ class SemaphoreCR(initialUnits : Int,
                // cont is now a CancellableContinuation
                cont ->
 
-               // Just ignore invokeOnCancellation since we resolve everything on CancellationException catch.
-               // This has a consequence. Even if the suspension is terminated by cancellation,
-               // a consequent release can alter this acquire to return with success,
-               // even if coroutine is already canceled.
-               // This can happen if resume happens before enter the lock in handleCancellation, called in
-               // the catch of CancellationException.
-               // But if we want cancellation to win in this case, we have to change flag done with a state that defines
-               // the acquire completion.
-               // Something like enum class PendingState { Pending, Completed, Canceled }
-               // And check the state handleCancellation.
-               // Here we don't follow this path and don't use invokeOnCancellation
+               // Just ignore "invokeOnCancellation", since we resolve everything on CancellationException catch.
+               //
+               // This has a consequence. Even if the suspension state is terminated by cancellation,
+               // a later release can alter this acquire to return with success, even if the coroutine is already canceled.
+               // This happens when resume occurs before enter the lock in handleCancellation, on the catch of CancellationException.
+               // But if we want cancellation to win in this case, we have to use a refactored "invokeOnCancellation".
+               // We must change the flag "done" with a state that defines the acquire completion.
+               // Something like enum class PendingState { Pending, Completed, Canceled }. On invokeOnCancellation,
+               // if it is not already completed, we complete with state "Canceled" and remove from the "pendingAcquires" list.
+               // on resume,  we complete with state "Completed". and remove from the "pendingAcquires" list.
+               // this marks who win the race from our viewpoint.
+               // But the viewpoint od the coroutine may be different. If  cancellation wins,
+               // the CancellationException catch will call "handleCancellation", and in there we must decide
+               // chacking the "pendingAcquire" state
+               // Here we don't follow this path and don't use "invokeOnCancellation"
 
-//                   cont.invokeOnCancellation {
-//                       mutex.withLock {
-//                           pendingAcquire?.done = true
-//                           pendingAcquires.remove(pendingAcquire)
-//                       }
-//                   }
+               //      cont.invokeOnCancellation {
+               //         mutex.withLock {
+               //            pendingAcquire?.done = true
+               //            pendingAcquires.remove(pendingAcquire)
+               //         }
+               //     }
 
                mutex.withLock {
                    if (currentPermits >= units) {
                        currentPermits -= units
                        // this resume within the lock is not dangerous
-                       // since it is just a marcar for internal state
-                       // telling that it has just a synchronous return
+                       // since it is just a flag for function internal state,
+                       // telling that the function will  return synchronous
                        cont.resume(Unit)
                    } else {
                        pendingAcquire = PendingAcquire(units, cont)
@@ -89,7 +93,7 @@ class SemaphoreCR(initialUnits : Int,
         }
     }
 
-    // acquire version with Timeout
+    // acquire version with timeout
     suspend fun acquire(units: Int, timeout: Duration) {
         withTimeout(timeout) {
             acquire(units)
@@ -110,7 +114,8 @@ class SemaphoreCR(initialUnits : Int,
             }
             list
         }
-        // best to do resumes out of lock
+        // best to do resumes out of lock in order to avoid dealocks if
+        // the coroutine resumes synchronously
         for(pa in resolved) {
             pa.cont.resume(Unit)
         }
