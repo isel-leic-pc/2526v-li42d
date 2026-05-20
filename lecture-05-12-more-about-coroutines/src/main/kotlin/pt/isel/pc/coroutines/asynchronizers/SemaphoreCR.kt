@@ -114,7 +114,7 @@ class SemaphoreCR(initialUnits : Int,
             }
             list
         }
-        // best to do resumes out of lock in order to avoid dealocks if
+        // best to do resumes out of lock in order to avoid deadlocks if
         // the coroutine resumes synchronously
         for(pa in resolved) {
             pa.cont.resume(Unit)
