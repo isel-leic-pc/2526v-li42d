@@ -16,6 +16,9 @@ class StructuredTaskScopeTests {
         val logger = KotlinLogging.logger {}
     }
 
+    /**
+     * extension method used to avois the ambiguity between Callable and Runnable used in scopes
+     */
     private fun <T, R> StructuredTaskScope<T, R>.fork1(block: () -> T): Subtask<T> {
         return this.fork(Callable { block() })
     }
@@ -30,18 +33,14 @@ class StructuredTaskScopeTests {
             val task2 = scope.fork1 { Task.success<String?>("t2", "Ok2").exec(1000) }
             val task3 = scope.fork1 { Task.success<String?>("t3", "Ok3").exec(800)  }
 
-            val res = scope.join()
-
-            if (res is Stream<*>) {
-                res.forEach {
-                    println((it as Subtask<String>).get())
-                }
-            }
+            scope.join()
 
             println("Done in ${System.currentTimeMillis() - startTime} ms!")
             println("task 1 result = " + task1.get())
             println("task 2 result = " + task2.get())
             println("task 3 result = " + task3.get())
+
+            println("Done in ${System.currentTimeMillis() - startTime} ms!")
         }
         logger.info("end test")
     }
@@ -50,6 +49,30 @@ class StructuredTaskScopeTests {
     fun `a simple scope with three subtasks where one or more fail`() {
         logger.info("start test")
         try {
+            StructuredTaskScope.open<Any>().use { scope ->
+                val startTime = System.currentTimeMillis();
+                var task1 = scope.fork1 { Task.fail<Any>("t1").exec(600) }
+                var task2 = scope.fork1 { Task.fail<Any>("t2").exec(300) }
+                var task3 = scope.fork1 { Task.success("t3", "Ok3").exec(3000) }
+
+                scope.join();
+
+                println("Done in ${System.currentTimeMillis() - startTime} ms!")
+
+            }
+        } catch (e: Exception) {
+            logger.info("catch error $e")
+        }
+        logger.info("end test")
+    }
+
+
+    @Test
+    fun `a simple scope with three subtasks where one or more fail but trying to get at least onr successful`() {
+        logger.info("start test")
+        try {
+            // Using this Joiner scope join waits for all subtasks
+            // trying to find one that succeds
             StructuredTaskScope.open<Any,Any >(Joiner.anySuccessfulResultOrThrow()).use { scope ->
                 val startTime = System.currentTimeMillis();
                 var task1 = scope.fork1 { Task.fail<Any>("t1").exec(600) }
@@ -68,6 +91,9 @@ class StructuredTaskScopeTests {
     }
 
 
+    /**
+     * To illustrate the use of sub scopes
+     */
     private fun inner(name: String): String =
         StructuredTaskScope.open<String, Any>(Joiner.anySuccessfulResultOrThrow()).use { scope ->
             var task1 = scope.fork1 { Task.success(name + "-1", "child-res-1").exec(3000) }
@@ -96,6 +122,7 @@ class StructuredTaskScopeTests {
             println("error $e on scope: ")
         }
     }
+
 
     private fun inner2( name: String) : String =
         try {
@@ -132,7 +159,7 @@ class StructuredTaskScopeTests {
 
     @Test
     @Throws(InterruptedException::class)
-    fun aComposedScopeWithTwoTasksAndTwoSubTasksRootScopeFail() {
+    fun aComposedScopeWithTwoTasksAndTwoSubScopeLevelsWithRootScopeFailing() {
         logger.info("start test")
         try {
             StructuredTaskScope.open<Any?>().use { scope ->
