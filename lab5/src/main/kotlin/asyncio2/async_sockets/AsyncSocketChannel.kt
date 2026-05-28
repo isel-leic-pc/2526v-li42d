@@ -6,7 +6,7 @@ import java.nio.channels.AsynchronousSocketChannel
  * A partial implementation of an asynchronous socket API
  * using CompletableFutures that is backed by a NIO2 AsynchronousSocketChannel
  *
- * Using the bridge developed in "nio_bridges.kt"
+ * Using the bridge developed in "nio_bridges0.kt"
  *
  * Taking advantage of the bridge operations for completable futures
  * from NIO2 operations, complete the class below with asynchronous operations

@@ -27,7 +27,7 @@ class ContextPreservationTests {
                     println("second flow repeat: ${coroutineContext.getInfo()}")
                     repeat(2) {
                         delay(100)
-                        emit(it+2)
+                        this@flow.emit(it+2)
                     }
                 }
             }

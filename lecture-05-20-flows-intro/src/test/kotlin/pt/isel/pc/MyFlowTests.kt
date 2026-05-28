@@ -17,6 +17,7 @@ class MyFlowTests {
 
     @Test
     fun `simple flow test using suspend function`() {
+
         val flow1 : MyFlow<Int> = myFlow {
             try {
                 logger.debug("start flow1")
@@ -46,11 +47,11 @@ class MyFlowTests {
                 println(it)
             }
 
-            flow1.collect(object : MyFlowCollector<Int> {
-                override suspend fun emit(t: Int) {
-                    println(t)
-                }
-            })
+//            flow1.collect(object : MyFlowCollector<Int> {
+//                override suspend fun emit(t: Int) {
+//                    println(t)
+//                }
+//            })
 
             logger.debug("end flow1 collect")
         }

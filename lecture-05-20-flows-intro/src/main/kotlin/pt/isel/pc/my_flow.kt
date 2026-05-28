@@ -1,5 +1,6 @@
 package pt.isel.pc
 
+import kotlinx.coroutines.FlowPreview
 import mu.KotlinLogging
 import pt.isel.pc.exceptions.AbortMyFlowException
 import kotlin.coroutines.cancellation.CancellationException
@@ -8,18 +9,19 @@ private   val logger = KotlinLogging.logger {}
 
 // the two interfaces below (MyFlow w MyFlowCollector) ara analogous
 // to the interfaces that support kotlin flows (Flow and FlowCollector)
-
 interface MyFlow<T> {
     suspend fun collect( collector : MyFlowCollector<T>)
 }
 
-interface MyFlowCollector<T> {
+fun interface MyFlowCollector<T> {
     suspend fun emit(t : T)
 }
 
 /**
  * This extension method support using a Function instead
  * of an anonymous class to pass de FlowCollector implementation to Flow collect
+ *
+ * REALLY NOT NECESSARY IF MyFlowCollector is marked as a "fun" interface
  *
  * That is;
  *
@@ -36,19 +38,19 @@ interface MyFlowCollector<T> {
  *      }
  *  })
  */
-suspend  fun <T> MyFlow<T>.collect( collector: suspend (T) -> Unit) {
-    collect(object: MyFlowCollector<T> {
-        override suspend fun emit(t : T ) : Unit {
-            collector(t)
-        }
-    })
-}
+//suspend  fun <T> MyFlow<T>.collect( collector: suspend (T) -> Unit) {
+//    collect(object: MyFlowCollector<T> {
+//        override suspend fun emit(t : T ) : Unit {
+//            collector(t)
+//        }
+//    })
+//}
 
 /**
  * The basic builder of flows, analogous to flow builder of kotlin flows
  */
-fun <T> myFlow ( block : suspend MyFlowCollector<T>.() -> Unit) : MyFlow<T> {
-    return object: MyFlow<T> {
+fun <T> myFlow ( block : suspend MyFlowCollector<T>.() -> Unit) : MyFlow<T> =
+    object: MyFlow<T> {
         override suspend fun collect( collector : MyFlowCollector<T>) {
             try {
                 collector.block()
@@ -59,7 +61,7 @@ fun <T> myFlow ( block : suspend MyFlowCollector<T>.() -> Unit) : MyFlow<T> {
             }
         }
     }
-}
+
 
 /**
  * map operation of flows
