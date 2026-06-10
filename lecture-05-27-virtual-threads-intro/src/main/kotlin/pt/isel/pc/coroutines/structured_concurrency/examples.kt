@@ -8,6 +8,18 @@ import kotlin.coroutines.coroutineContext
 
 private val logger = KotlinLogging.logger {}
 
+
+
+private fun longRun() {
+    var sum: Long = 0
+    val startTime = System.currentTimeMillis()
+    for (i in 0..<Int.MAX_VALUE) {
+        for (j in 0..10) {
+            sum += j
+        }
+    }
+}
+
 suspend fun inc(value : Int) : Int {
     try {
         delay(1000)
@@ -20,16 +32,6 @@ suspend fun inc(value : Int) : Int {
         throw e
     }
 
-}
-
-private fun longRun() {
-    var sum: Long = 0
-    val startTime = System.currentTimeMillis()
-    for (i in 0..<Int.MAX_VALUE) {
-        for (j in 0..10) {
-            sum += j
-        }
-    }
 }
 
 suspend fun square(value : Int) : Int {
